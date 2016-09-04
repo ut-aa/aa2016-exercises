@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.4)  4 SEP 2016 13:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.4)  4 SEP 2016 20:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1095,9 +1095,16 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 31.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+)
+Underfull \hbox (badness 1354) in paragraph at lines 80--85
+[]\T1/lmr/m/n/10 (30%) Imp-le-men-tee-ri-da lii-des \T1/lmr/m/it/10 Sor-ter\T1/
+lmr/m/n/10 , ka-su-ta-des üht kesk-mise aja-li-se kee-ru-ku-se hin-nan-gu-ga
+ []
 
-] 
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+]
+
 AED: lastpage setting LastPage
 [2]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
@@ -1112,7 +1119,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
 Here is how much of TeX's memory you used:
  21872 strings out of 494374
  416774 string characters out of 6164955
- 567457 words of memory out of 5000000
+ 566457 words of memory out of 5000000
  24792 multiletter control sequences out of 15000+600000
  32321 words of font info for 32 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
@@ -1124,7 +1131,7 @@ ips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share
 /fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/
 type1/public/lm/lmtt9.pfb>
-Output written on lab-1-new.pdf (2 pages, 143678 bytes).
+Output written on lab-1-new.pdf (2 pages, 143962 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream
