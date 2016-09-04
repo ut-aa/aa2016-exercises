@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.13)  23 AUG 2016 21:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.4)  4 SEP 2016 13:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **lab-1-new.tex
 (./lab-1-new.tex
 LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 31 language(s) loaded.
+Babel <3.9q> and hyphenation patterns for 29 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -475,6 +475,8 @@ File: babel.def 2016/02/24 3.9q Babel common definitions
 \babel@savecnt=\count96
 \U@D=\dimen109
 )
+\l@british = a dialect from \language\l@english 
+\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
@@ -1108,12 +1110,12 @@ Package rerunfilecheck Info: File `lab-1-new.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
  ) 
 Here is how much of TeX's memory you used:
- 21870 strings out of 494333
- 416754 string characters out of 6163939
- 566609 words of memory out of 5000000
- 24797 multiletter control sequences out of 15000+600000
+ 21872 strings out of 494374
+ 416774 string characters out of 6164955
+ 567457 words of memory out of 5000000
+ 24792 multiletter control sequences out of 15000+600000
  32321 words of font info for 32 fonts, out of 8000000 for 9000
- 372 hyphenation exceptions out of 8191
+ 350 hyphenation exceptions out of 8191
  61i,11n,87p,929b,1333s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share
@@ -1122,7 +1124,7 @@ ips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share
 /fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/
 type1/public/lm/lmtt9.pfb>
-Output written on lab-1-new.pdf (2 pages, 143357 bytes).
+Output written on lab-1-new.pdf (2 pages, 143678 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream
