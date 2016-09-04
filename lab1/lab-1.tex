@@ -1,98 +1,93 @@
-\documentclass[b5paper]{../styles/oop}
-\usepackage[T1]{fontenc}
-\usepackage[ansinew]{inputenc}
-\usepackage[estonian]{babel}
-\usepackage{url}
+\documentclass[a4paper]{article}
+
+\usepackage{../styles/new-style}
+
+
+\newcommand{\hmwkTitle}{Ajalise keerukuse empiiriline hindamine} % Assignment title
+\newcommand{\hmwkClass}{Algoritmid ja andmestruktuurid} % Course/class
+
 
 \begin{document}
-\section*{Algoritmid ja andmestruktuurid \break Arvutipraktikumi
-¸lesanded I}
-\subsection*{Ajalise keerukuse empiiriline hindamine}
 
-Algoritmi efektiivsuse hindamisel on ¸ks olulisi kriteeriume algoritmi
-t‰itmiseks tehtavate operatsioonide arv (mis m‰‰rab ka vastava programmi
-tˆˆaja). Algoritmi ajaline keerukus on funktsioon $k$, mis algandmete
-mahule $n$ seab vastavusse algoritmi sellise mahuga ¸lesannete
-t‰itmiseks tehtavate operatsioonide keskmise arvu $k(n)$. ‹tleme, et
-algoritmi ajalise keerukuse $k$ $O$-hinnang on $f(n)$ (l¸hemalt: $k$ on
-$O(f)$), kui leiduvad konstandid $c > 0$ ja $n_{0}$ nii, et iga
-$n>n_{0}$ korral  $k(n)<c f(n)$. Piltlikult: funktsiooni $k$ graafiku
-kasvukiirus ei ole "`‰gedam"' kui funktsioonil $f$.
+\textbf{Kodut√∂√∂ esitamise t√§htaeg: 17. september, 23:59}
 
-Algoritmi ajalise keerukuse hinnang m‰‰rab ka algoritmi praktilise
-rakendatavuse piiri: v‰ga kiiresti kasvava keerukusfunktsiooniga
-algoritmi tasub realiseerida vaid v‰ikesemahuliste ¸lesannete jaoks.
+Algoritmi efektiivsuse hindamisel on √ºks olulisi kriteeriume algoritmi
+t√§itmiseks tehtavate operatsioonide arv s√µltuvalt sisendi suurusest.
 
-Ajalise keerukuse empiiriliseks hindamiseks (ja vastavate graafikute
-joonistamiseks) tuleb mııta programmi tˆˆaega erinevate algandmemahtude
-korral. Keeles Python saab seda teha n‰iteks moodulis #time#
-defineeritud funktsiooni #time()# abil:
-\begin{prog}
-from time import *
 
-a = time()
-# PROGRAMMIOSA, MILLE TƒITMISAEGA M’’DAME (algus)
+Algoritmi ajaline keerukus on funktsioon $f$, mis algandmete
+mahule $n$ seab vastavusse algoritmi t√§itmiseks tehtavate operatsioonide keskmise arvu $f(n)$. 
 
-# PROGRAMMIOSA, MILLE TƒITMISAEGA M’’DAME (lıpp)
-b = time()
+Algoritmi ajaline keerukus m√§√§rab ka algoritmi praktilise
+rakendatavuse piiri: v√§ga kiiresti kasvava keerukusfunktsiooniga
+algoritmi tasub realiseerida vaid v√§ikesemahuliste √ºlesannete jaoks.
 
-print(b - a) # PROGRAMMIOSA t‰itmisaeg sekundites
-print((b - a)*1000) # PROGRAMMIOSA t‰itmisaeg millisekundites
-\end{prog}
+Ajalise keerukuse empiiriliseks hindamiseks tuleb m√µ√µta programmi t√∂√∂aega erinevate algandmemahtude
+korral.
 
-\begin{ylesanne}[Praktikumitˆˆ]
-Fibonacci arvud defineeritakse seostega $f(0)=0$, $f(1)=1$ ja iga $n>1$
-korral $f(n)=f(n-1)+f(n-2)$.
+Javas saab seda teha n√§iteks j√§rgnevalt:
 
+\begin{lstlisting}
+long startTime = System.nanoTime();    
+// ... the code being measured ...    
+long estimatedTime = System.nanoTime() - startTime;
+\end{lstlisting}
+
+J√§rgneva √ºlesande eesm√§rk on n√§idata kui oluline v√µib olla algoritmi valik suuremahuliste probleemide lahendamisel.
+\begin{problem}
+\textbf{√úlesanne 1}
 \begin{enumerate}
-    \item[a)] Leida suurim indeks, millele vastava Fibonacci arvu on
-arvuti vıimeline v‰lja arvutama 1 sekundi jooksul rekursiivse meetodiga
---- Pythonis n‰iteks sellise meetodiga:
+   \item[a)] (20\%) Implementeerida liides \textit{Fibonacci}, kasutades otse Fibonacci arvu definitsioonist tulenevat rekursiivset algoritmi (\url{https://et.wikipedia.org/wiki/Fibonacci_jada}). Leida suurim indeks, millele vastavat Fibonacci arvu on 
+arvuti v√µimeline v√§lja arvutama 1 sekundi jooksul, kasutades seda implementatsiooni. Rakendada implementatsiooni programmis ja lisada tulemus Moodle'isse kommentaarina. 
+    \item[b)] (10\%) Implementeerida sama liides, kasutades j√§rgnevat iteratiivset algorimi: 
+\begin{lstlisting}
+public int fibonacci(int n) {
+        if (n == 0){
+            return 0;
+        }
+        if (n == 1){
+            return 1;
+        }
+        int bigger = 1;
+        int smaller = 0;
+        int tmp;
+        for (int i = 1; i < n; i++){
+            tmp = bigger + smaller;
+            smaller = bigger;
+            bigger = tmp;
+        }
+        return bigger;
+    }
+\end{lstlisting}
+Teha kindlaks, kui kaua aega kulub antud implementatsiooniga eelmises punktis leitud indeksiga Fibonacci arvu leidmiseks. Lisada tulemus Moodle'isse kommentaarina.
+
 \end{enumerate}
-\ylpoolita
-\begin{center}
-\begin{prog}
-def fibo(n):
-   if n < 1: return 0
-   if n < 3: return 1
-   return fibo(n - 1) + fibo(n - 2)
 
-print (fibo(9))
-\end{prog}
-\end{center}
-\begin{enumerate}
-    \item[b)] Leitud v‰‰rtuse puhul teha kindlaks sellise meetodi
-tˆˆaeg, kus Fibonacci arvude arvutamine on realiseeritud
-mitterekursiivse algoritmiga.
-    \item[c)] M‰‰rata ka uue algoritmi puhul suurim indeks, millele
-vastava Fibonacci arvu suudab arvuti v‰lja arvutada 1 sekundi jooksul.
-\end{enumerate}
-\end{ylesanne}
+\end{problem}
 
-\begin{ylesanne}[Iseseisev tˆˆ]
+\begin{problem}
+\textbf{√úlesanne 2}
+
 \begin{enumerate}
-\item[a)] Valida v‰lja, realiseerida ja testida l‰bi ¸ks ruutkeerukusega
-(keskmise ajalise keerukuse hinnanguga $\Theta(n^2)$) algoritm j‰rjendi elementide
-¸mberpaigutamiseks mittekahanevasse j‰rjekorda.  Sellisteks
-algoritmideks on n‰iteks mullimeetod ({\it bubble sort}), valikumeetod
+\item[a)] (30\%) Implementeerida liides \textit{Sorter}, kasutades implementatsioonis √ºht ruutkeerukusega
+(keskmise ajalise keerukuse hinnanguga $\Theta(n^2)$) algoritmi j√§rjendi elementide
+√ºmberpaigutamiseks mittekahanevasse j√§rjekorda.  Sellisteks
+algoritmideks on n√§iteks mullimeetod ({\it bubble sort}), valikumeetod
 ({\it selection sort}), pistemeetod ({\it insertion sort}) jt.
-Testimisel mitte unustada nn ‰‰rejuhte (j‰rjendid pikkusega 0, 1 vıi 2;
-ette antakse sorditud j‰rjend, vıi siis vastupidises suunas sorditud
-j‰rjend).
-\item[b)] Valida v‰lja, realiseerida ja testida l‰bi ¸ks keskmise ajalise
-keerukuse hinnanguga  $ \Theta(n\log n)$ algoritm j‰rjendi elementide
-¸mberpaigutamiseks mittekahanevasse j‰rjekorda. Sellisteks algoritmideks
-on n‰iteks kiirmeetod ({\it quick sort}), ¸hildusmeetod ({\it merge
-sort}), Shelli meetod ({\it Shell sort}) jt. Testimisel mitte unustada
-nn ‰‰rejuhte!
-\item[c)] Koostada nende meetodite tˆˆ\-aegade graafikud, mis ilmekalt
-demonstreeriksid kahe valitud sortimismeetodi tˆˆaja kasvu vastavalt
-sorditavate j‰rjendite pikkuste kasvule. Kolmandaks olgu joonisele
-lisatud ka s¸steemse sortimismeetodi tˆˆaja graafik (nt Pythoni korral
-meetod  #sort()#).
+Implementatsiooni testimisel mitte unustada nn √§√§rejuhte (j√§rjendid pikkusega 0 v√µi 1, sorditud j√§rjend, vastupidises suunas sorditud
+j√§rjend).
+\item[b)] (30\%) Implementeerida liides \textit{Sorter}, kasutades √ºht keskmise ajalise
+keerukuse hinnanguga  $ \Theta(n\log n)$ algoritmi j√§rjendi elementide
+√ºmberpaigutamiseks mittekahanevasse j√§rjekorda. Sellisteks algoritmideks
+on n√§iteks kiirmeetod ({\it quick sort}), √ºhildusmeetod ({\it merge
+sort}), Shelli meetod ({\it Shell sort}) jt. Implementatsiooni testimisel pidada silmas ka √§√§rejuhte.
+\item[c)] (10\%) Koostada kahe implementatsiooni v√µrdlusgraafik(ud), mis ilmekalt
+demonstreeriksid kahe valitud algoritmi t√∂√∂aja kasvu vastavalt sorditavate j√§rjendite pikkuste kasvule. Kolmandaks olgu joonisele lisatud ka s√ºsteemse sortimismeetodi t√∂√∂aja graafik (\textit{java.util.Collections.sort}). 
+
+Kui v√µimalik, siis tuua graafik ka mingi √§√§rejuhu kohta, kus esimeses punktis kasutatud algoritm on kiirem teises punktis kasutatud algoritmist.
 \end{enumerate}
-\emph{Soovitus.} Sorteerimismeetodite algoritme leiab kas Internetist
-vıi ıpikust vıi loengumaterjalidest.
-\end{ylesanne}
+\end{problem}
+
+\url{https://github.com/ut-aa/aa2016-lab1}
 
 \end{document}

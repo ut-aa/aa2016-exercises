@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.4)  4 SEP 2016 20:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.4)  4 SEP 2016 21:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lab-1-new.tex
-(./lab-1-new.tex
+**lab-1.tex
+(./lab-1.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 29 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -989,8 +989,8 @@ Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '3.90'
 ))) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ))
-(./lab-1-new.aux)
-\openout1 = `lab-1-new.aux'.
+No file lab-1.aux.
+\openout1 = `lab-1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
@@ -1007,7 +1007,7 @@ LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 10.
- (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package lastpage Info: Please have a look at the pageslts package at
@@ -1057,19 +1057,16 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 10.
 LaTeX Info: Redefining \pageref on input line 10.
 LaTeX Info: Redefining \nameref on input line 10.
-
-(./lab-1-new.out) (./lab-1-new.out)
 \@outlinefile=\write6
-\openout6 = `lab-1-new.out'.
+\openout6 = `lab-1.out'.
 
- ABD: EveryShipout initializing macros
+
+ABD: EveryShipout initializing macros
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 18.
-
-(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+ (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 18.
-
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1091,12 +1088,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 18.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 18.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 31.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 30.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 1354) in paragraph at lines 80--85
+Underfull \hbox (badness 1354) in paragraph at lines 79--84
 []\T1/lmr/m/n/10 (30%) Imp-le-men-tee-ri-da lii-des \T1/lmr/m/it/10 Sor-ter\T1/
 lmr/m/n/10 , ka-su-ta-des üht kesk-mise aja-li-se kee-ru-ku-se hin-nan-gu-ga
  []
@@ -1105,25 +1102,38 @@ lmr/m/n/10 , ka-su-ta-des üht kesk-mise aja-li-se kee-ru-ku-se hin-nan-gu-ga
 
 ]
 
+Package lastpage Warning: Rerun to get the references right on input line 93.
+
+
 AED: lastpage setting LastPage
 [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
- (./lab-1-new.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 94.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
-Package rerunfilecheck Info: File `lab-1-new.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 93.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
+ (./lab-1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 93.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
+
+
+Package rerunfilecheck Warning: File `lab-1.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `lab-1.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 93.
  ) 
 Here is how much of TeX's memory you used:
- 21872 strings out of 494374
- 416774 string characters out of 6164955
+ 21866 strings out of 494374
+ 416662 string characters out of 6164955
  566457 words of memory out of 5000000
  24792 multiletter control sequences out of 15000+600000
  32321 words of font info for 32 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
- 61i,11n,87p,929b,1333s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,11n,87p,925b,1335s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share
 /texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm
@@ -1131,7 +1141,7 @@ ips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share
 /fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/
 type1/public/lm/lmtt9.pfb>
-Output written on lab-1-new.pdf (2 pages, 143962 bytes).
+Output written on lab-1.pdf (2 pages, 144082 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream
