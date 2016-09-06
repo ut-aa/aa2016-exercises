@@ -1,0 +1,122 @@
+\documentclass[a4paper]{article}
+
+\usepackage{../styles/new-style}
+
+\newcommand{\hmwkTitle}{Variantide läbivaatamine} % Assignment title
+\newcommand{\hmwkClass}{Algoritmid ja andmestruktuurid} % Course/class
+
+\begin{document}
+
+\section*{Variantide läbivaatamine ja kombinatoorika}
+
+Järgnevad ülesanded tuleks lahendada rekursiivsete funktsioonide abil
+taandades ülesande teatavaks arvuks esialgse ülesandega sarnasteks
+alamülesanneteks. Proovige ülesanne jaotada osadeks (alamülesanneteks)
+nii, et iga osa jaoks saaks rakendada rekursiivselt sama funktsiooni.
+
+Kombinatsioone, permutatsioone ja muid valikuid teostavaid standardfunktsioone kasutada ei tohi.
+
+\begin{problem}
+\textbf{Ülesanne 1}
+\begin{enumerate}
+\item 
+Kirjutada rekursiivne funktsioon, mis väljastab ekraanile kõik
+bittvektorid, mille pikkus on võrdne etteantud arvuga.
+\item
+Modifitseerida seda funktsiooni nii, et ekraanile väljastamise asemel funktsioon tagastaks kõikide sobivate bittvektorite hulka. Modifitseeritud funktsioon peaks implementeerima liidest \textit{BitVectorGenerator}.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+\textbf{Ülesanne 2}
+\newline
+Implementeerida liidest \textit{SubSetGenerator}.
+\begin{enumerate}
+\item
+Kirjutada rekursiivne funktsioon \textit{allSubsets}, mis tagastab määratud hulga kõik alamhulgad.
+\item
+Kirjutada rekursiivne funktsioon \textit{allSubsetsOfSizeK}, mis tagastab määratud hulga kõik alamhulgad, kus on täpselt \textit{k} elementi.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+\textbf{Ülesanne 3}
+\begin{enumerate}
+\item
+Kirjutada rekursiivne funktsioon, mis tagastab listi kõike etteantud listi permutatsioonidega.
+Funktsioon peaks implementeerima liidest \textit{PermutationGenerator}.
+\item
+Seda funktsiooni katsetades teha kindlaks maksimaalne sõnepikkus, mille korral see funktsioon töötab veel alla $1$
+sekundi.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+\textbf{Ülesanne 4}
+\newline
+\textbf{Järgmistest ülesannetest valida üks ja lahendada see.} Vajalikud andmed genereerida juhuslikult sobivast
+arvuvahemikust. Valitud ülesande lahendusprogramm peab sisaldama mõistliku arvu teste.
+
+\begin{enumerate}
+\item[a)] {\em Bobimeeskonna koostamine.} $n$-liikmelisest
+treeningrühmast ($n=10 \pm 2$) tuleb eelolevaks võistluseks välja valida
+neljase bobi meeskond. Treeningrühma iga liikme kohta on antud nimi,
+kaal ja naturaalarvuline reiting (mis näitab treenituse taset).
+Kirjutada programm, mis leiab sellise bobimeeskonna, mille kogukaal ei
+ületa etteantud väärtust ja mille reitingute summa on võimalikult suur.
+Realiseerida liides \textit{BobsledTeam}.
+
+ \item[b)] {\em Sobivaima töörühma väljavalimine.} Antud on töötajate
+nimekiri ja sobivusmaatriks $(s_{ij})$, mille element $s_{ij}$ näitab töötajate
+$i$ ja $j$ vastastikuse sobivuse taset reaalarvuna lõigul $[0;1]$.
+Kirjutada programm, mis leiab võimalikult suure rühma töötajaid, mille
+korral vastastikuste sobivuste keskmine on suurem kui 0{,}5.
+Realiseerida liides \textit{HarmonicWorkgroup}.
+
+ \item[c) ] {\em Praktikumijuhendajaga kokkuleppel} valida ise üks
+ülesanne, mille lahendusalgoritm vajab kõikide variantide läbivaatamist
+(kas siis eks\-po\-nent\-siaal- või faktoriaalkeerukusega algoritmi abil).
+Nõutav on, et see ülesanne teeks midagi "`kasulikku"'.
+\end{enumerate}
+\end{problem}
+
+\section*{Lihtsamad puud}
+
+Puu on hierarhiline andmestruktuur, mis koosneb \textbf{tippudest} (ehk sõlmedest; inglise keeles \emph{nodes} või \emph{vertices}), ja nende vahelistest \textbf{kaartest} \emph{(edges)}. Kaared ühendavad tippu tema \textbf{vanemaga} \emph{(parent)} ning \textbf{lastega} \emph{(children)}. Igas mittetriviaalses\footnote{Triviaalne puu on niisugune puu, mis ei sisalda ühtegi tippu ega kaart, ehk tühi puu.} puus eksisteerib üks teistest erinev tipp, mida nimetatakse \textbf{juureks} \emph{(root)}. Igal tipul on täpselt üks vanem, v.a. juurtipp, millel ei ole vanemat. Tippe, millel ei ole lapsi, nimetatakse \textbf{lehtedeks} (\emph{leafs}). Täpsemalt puudest ja nende tüüpidest räägitakse hilisemates loengutes.
+
+Selles praktikumis me vaatleme ühte lihtsamat puutüübi --- \textbf{kahendpuud}. Kahendpuu tippudel võib olla maksimaalselt kaks last, mille järjekord on tavaliselt tähtis (on \emph{vasak} ja \emph{parem} laps). Niisuguse puu tippu realisatsioon võib olla järgmine (täielik realisatsioon on toodud materjalide lõpus):
+
+\begin{lstlisting}
+public class BinaryTreeVertex<Data>{
+	private BinaryTreeVertex<Data> parent = null;
+	private BinaryTreeVertex<Data> leftVertex = null;
+	private BinaryTreeVertex<Data> rightVertex = null;
+	
+	private Data data = null;
+}
+\end{lstlisting}
+
+Järgmised ülesanded eeldavad seda, et etteantud puu on esitatud kasutades seda realisatsiooni.
+
+\begin{problem}
+\textbf{Ülesanne 5}
+\newline
+Implementeerida liidest \textit{BinaryTreeMeasurer}.
+\begin{enumerate}
+\item
+Kirjutada funktsioon \textit{measureTreeHeight}, mis tagastab etteantud puu kõrgust.
+Kui etteantud juurtipul ei ole ühtegi last, see funktsioon peaks tagastama 0.
+\item
+Kirjutada funktsioon \textit{countNodes}, mis tagastab etteantud puu tippude arvu (k.a. juur).
+\item
+Kirjutada funktsioon \textit{countLeaves}, mis tagastab etteantud puu lehtede arvu.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+\textbf{Ülesanne 6}
+\newline
+Implementeerida liidest \textit{BinaryTreeDataCounter}. Selleks kirjutada funktsioon \textit{countData}, mis tagastab mitu tippu etteantud puust sisaldab funktsiooni argumendina antud väärtust.
+\end{problem}
+
+\end{document}
