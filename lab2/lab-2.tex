@@ -9,7 +9,7 @@
 
 \section*{Variantide läbivaatamine ja kombinatoorika}
 
-Järgnevad ülesanded tuleks lahendada rekursiivsete funktsioonide abil
+Järgnevad ülesanded tuleks lahendada rekursiivsete funktsioonide abil,
 taandades ülesande teatavaks arvuks esialgse ülesandega sarnasteks
 alamülesanneteks. Proovige ülesanne jaotada osadeks (alamülesanneteks)
 nii, et iga osa jaoks saaks rakendada rekursiivselt sama funktsiooni.
@@ -23,14 +23,14 @@ Kombinatsioone, permutatsioone ja muid valikuid teostavaid standardfunktsioone k
 Kirjutada rekursiivne funktsioon, mis väljastab ekraanile kõik
 bittvektorid, mille pikkus on võrdne etteantud arvuga.
 \item
-Modifitseerida seda funktsiooni nii, et ekraanile väljastamise asemel funktsioon tagastaks kõikide sobivate bittvektorite hulka. Modifitseeritud funktsioon peaks implementeerima liidest \textit{BitVectorGenerator}.
+Modifitseerida seda funktsiooni nii, et ekraanile väljastamise asemel funktsioon tagastaks kõikide sobivate bittvektorite hulga. Modifitseeritud funktsioon peaks implementeerima liidest \textit{BitVectorGenerator}.
 \end{enumerate}
 \end{problem}
 
 \begin{problem}
 \textbf{Ülesanne 2}
 \newline
-Implementeerida liidest \textit{SubSetGenerator}.
+Implementeerida liides \textit{SubSetGenerator}.
 \begin{enumerate}
 \item
 Kirjutada rekursiivne funktsioon \textit{allSubsets}, mis tagastab määratud hulga kõik alamhulgad.
@@ -43,7 +43,7 @@ Kirjutada rekursiivne funktsioon \textit{allSubsetsOfSizeK}, mis tagastab määr
 \textbf{Ülesanne 3}
 \begin{enumerate}
 \item
-Kirjutada rekursiivne funktsioon, mis tagastab listi kõike etteantud listi permutatsioonidega.
+Kirjutada rekursiivne funktsioon, mis võtab parameetriks listi A ja tagastab listi, mis koosneb kõikidest listi A permutatsioonidest.
 Funktsioon peaks implementeerima liidest \textit{PermutationGenerator}.
 \item
 Seda funktsiooni katsetades teha kindlaks maksimaalne sõnepikkus, mille korral see funktsioon töötab veel alla $1$
@@ -84,7 +84,7 @@ Nõutav on, et see ülesanne teeks midagi "`kasulikku"'.
 
 Puu on hierarhiline andmestruktuur, mis koosneb \textbf{tippudest} (ehk sõlmedest; inglise keeles \emph{nodes} või \emph{vertices}), ja nende vahelistest \textbf{kaartest} \emph{(edges)}. Kaared ühendavad tippu tema \textbf{vanemaga} \emph{(parent)} ning \textbf{lastega} \emph{(children)}. Igas mittetriviaalses\footnote{Triviaalne puu on niisugune puu, mis ei sisalda ühtegi tippu ega kaart, ehk tühi puu.} puus eksisteerib üks teistest erinev tipp, mida nimetatakse \textbf{juureks} \emph{(root)}. Igal tipul on täpselt üks vanem, v.a. juurtipp, millel ei ole vanemat. Tippe, millel ei ole lapsi, nimetatakse \textbf{lehtedeks} (\emph{leafs}). Täpsemalt puudest ja nende tüüpidest räägitakse hilisemates loengutes.
 
-Selles praktikumis me vaatleme ühte lihtsamat puutüübi --- \textbf{kahendpuud}. Kahendpuu tippudel võib olla maksimaalselt kaks last, mille järjekord on tavaliselt tähtis (on \emph{vasak} ja \emph{parem} laps). Niisuguse puu tippu realisatsioon võib olla järgmine (täielik realisatsioon on toodud materjalide lõpus):
+Selles praktikumis me vaatleme üht lihtsamat puutüüpi --- \textbf{kahendpuud}. Kahendpuu tippudel võib olla maksimaalselt kaks last, mille järjekord on tavaliselt tähtis (on \emph{vasak} ja \emph{parem} laps). Niisuguse puu tipu realisatsioon võib olla järgmine (täielik realisatsioon on toodud lab-2 projektis):
 
 \begin{lstlisting}
 public class BinaryTreeVertex<Data>{
@@ -104,8 +104,8 @@ Järgmised ülesanded eeldavad seda, et etteantud puu on esitatud kasutades seda
 Implementeerida liidest \textit{BinaryTreeMeasurer}.
 \begin{enumerate}
 \item
-Kirjutada funktsioon \textit{measureTreeHeight}, mis tagastab etteantud puu kõrgust.
-Kui etteantud juurtipul ei ole ühtegi last, see funktsioon peaks tagastama 0.
+Kirjutada funktsioon \textit{measureTreeHeight}, mis tagastab etteantud puu kõrguse.
+Kui etteantud juurtipul ei ole ühtegi last, siis funktsioon peaks tagastama 0.
 \item
 Kirjutada funktsioon \textit{countNodes}, mis tagastab etteantud puu tippude arvu (k.a. juur).
 \item
@@ -116,7 +116,9 @@ Kirjutada funktsioon \textit{countLeaves}, mis tagastab etteantud puu lehtede ar
 \begin{problem}
 \textbf{Ülesanne 6}
 \newline
-Implementeerida liidest \textit{BinaryTreeDataCounter}. Selleks kirjutada funktsioon \textit{countData}, mis tagastab mitu tippu etteantud puust sisaldab funktsiooni argumendina antud väärtust.
+Implementeerida liides \textit{BinaryTreeDataCounter}. Selleks kirjutada funktsioon \textit{countData}, mis tagastab mitu tippu etteantud puust sisaldab funktsiooni argumendina antud väärtust.
 \end{problem}
+
+\url{https://github.com/ut-aa/aa2016-lab2}
 
 \end{document}
