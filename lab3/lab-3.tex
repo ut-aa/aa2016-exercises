@@ -1,0 +1,63 @@
+\documentclass[a4paper]{article}
+
+\usepackage{../styles/new-style}
+
+\newcommand{\hmwkTitle}{Magasin ja järjekord} % Assignment title
+\newcommand{\hmwkClass}{Algoritmid ja andmestruktuurid} % Course/class
+
+\begin{document}
+
+\textbf{Kodutöö esitamise tähtaeg: 15. oktoober, 23:59}
+
+{\center
+\subsection*{Magasin ja järjekord}
+}
+
+Selles praktikumis vaatleme kaht abstraktset andmetüüpi -- magasini ja järjekorda. Abstraktne andmetüüp on oma ideelt väga sarnane liidesega -- selles kirjeldatakse, mida on võimalik teha, kuid ei puudutata seda, kuidas midagi teha.
+
+Magasin ja järjekord on mõlemad andmetüübid, mis võimaldavad elemente lisada ja eemaldada. Erinevus seisneb selles, et magasinist saab eemaldada ainult sinna kõige viimasena lisatud magasinis veel allesoleva elemendi (\textit{Last in, first out} -- LIFO), järjekorrast aga ainult elemendi, mis lisati varem kui kõik teised järjekorras olevad elemendid (\textit{First in, first out} -- FIFO).
+
+
+
+\begin{problem}
+\textbf{Ülesanne 1}
+\begin{enumerate}
+\item 
+Implementeerida magasin vastavalt liidesele \textit{Stack}.
+\item Implementeerida järjekord vastavalt liidesel \textit{Queue}.
+\end{enumerate}
+\end{problem}
+
+
+Eelmises praktikumis tegime tutvust kahendpuudega. See praktikum vaatleme kaht peamist viisi, kuidas kahendpuid (ja ka puid üldisemalt) \textbf{läbitakse} (\textit{traverse}). Puu läbimise all mõeldakse puu kõikide tippude mingil viisil töötlemist.
+
+Esimene viis puu läbimiseks on teha seda \textbf{sügavuti} (\textit{depth-first}). Sellisel juhul töödeldakse iga tipu korral kõigepealt selle tipu kõik järglased (ehk tipu lapsed või nende järglased) ning alles pärast seda teised tipud.
+
+Teine viis puu läbimiseks on \textbf{laiuti}. Sellisel juhul töödeldakse iga tipu korral kõigepealt tema \textbf{õed-vennad} (\textit{siblings}) ehk tipud, millega on tipul sama vanem ning seejärel ülejäänud tipud.
+
+\begin{problem}
+\textbf{Ülesanne 2}
+\newline
+Kasutada eelnevas ülesandes loodud magasini ja järjekorra implementatsioone.
+\begin{enumerate}
+\item
+Kirjutada meetod, mis läbib kahendpuu süvitsi. Implementeerida liides \textit{DFS}.
+\item
+Kirjutada meetod, mis läbib kahendpuu laiuti. Implementeerida liides \textit{BFS}.
+\end{enumerate}
+\end{problem}
+
+
+
+
+\begin{problem}
+\textbf{Ülesanne 3}
+\newline
+Luua oma versioon brauseri aadressiribast, mille edasi ja tagasi liikumise funktsionaalsus oleks samasugune nagu enimlevinud brauseritel (nt. \textit{Google Chrome}). Implementeerida liides \textit{AddressBar} ning katsetada seda klasside \textit{Browser} ja \textit{BrowserImpl} abil.
+\end{problem}
+
+\url{https://github.com/ut-aa/aa2016-lab3}
+
+
+
+\end{document}
