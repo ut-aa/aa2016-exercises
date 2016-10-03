@@ -21,15 +21,18 @@ Magasin ja järjekord on mõlemad andmetüübid, mis võimaldavad elemente lisad
 
 \begin{problem}
 \textbf{Ülesanne 1}
+
+Implementeerida liidesed \textit{Stack} ja \textit{Queue}.
 \begin{enumerate}
-\item 
-Implementeerida magasin vastavalt liidesele \textit{Stack}.
-\item Implementeerida järjekord vastavalt liidesel \textit{Queue}.
+\item  (25\%)
+Realiseerida magasini andmestruktuur.
+\item  (25\%)
+Realiseeirda järjekorra andmestruktuur.
 \end{enumerate}
 \end{problem}
 
 
-Eelmises praktikumis tegime tutvust kahendpuudega. See praktikum vaatleme kaht peamist viisi, kuidas kahendpuid (ja ka puid üldisemalt) \textbf{läbitakse} (\textit{traverse}). Puu läbimise all mõeldakse puu kõikide tippude mingil viisil töötlemist.
+Eelmises praktikumis tegime tutvust kahendpuudega. Selles praktikumis vaatleme kaht peamist viisi, kuidas kahendpuid (ja ka puid üldisemalt) \textbf{läbitakse} (\textit{traverse}). Puu läbimise all mõeldakse puu kõikide tippude mingil viisil töötlemist.
 
 Esimene viis puu läbimiseks on teha seda \textbf{sügavuti} (\textit{depth-first}). Sellisel juhul töödeldakse iga tipu korral kõigepealt selle tipu kõik järglased (ehk tipu lapsed või nende järglased) ning alles pärast seda teised tipud.
 
@@ -37,13 +40,13 @@ Teine viis puu läbimiseks on \textbf{laiuti}. Sellisel juhul töödeldakse iga 
 
 \begin{problem}
 \textbf{Ülesanne 2}
-\newline
-Kasutada eelnevas ülesandes loodud magasini ja järjekorra implementatsioone.
+
+Implementeerida liidesed \textit{DFS} ja \textit{BFS}. Kasutada eelnevas ülesandes loodud magasini ja järjekorra implementatsioone.
 \begin{enumerate}
-\item
-Kirjutada meetod, mis läbib kahendpuu süvitsi. Implementeerida liides \textit{DFS}.
-\item
-Kirjutada meetod, mis läbib kahendpuu laiuti. Implementeerida liides \textit{BFS}.
+\item  (20\%)
+Realiseerida meetod \textit{depthFirstSearch}, mis läbib kahendpuu süvitsi.
+\item  (20\%)
+Realiseerida meetod \textit{breathFirstSearch}, mis läbib kahendpuu laiuti.
 \end{enumerate}
 \end{problem}
 
@@ -51,10 +54,22 @@ Kirjutada meetod, mis läbib kahendpuu laiuti. Implementeerida liides \textit{BF
 
 
 \begin{problem}
-\textbf{Ülesanne 3}
+\textbf{Ülesanne 3}  (10\%)
 \newline
-Luua oma versioon brauseri aadressiribast, mille edasi ja tagasi liikumise funktsionaalsus oleks samasugune nagu enimlevinud brauseritel (nt. \textit{Google Chrome}). Implementeerida liides \textit{AddressBar} ning katsetada seda klasside \textit{Browser} ja \textit{BrowserImpl} abil.
+Implementeerida liides \textit{AddressBar}.
+
+
+Luua oma versioon brauseri aadressiribast, mille edasi ja tagasi liikumise funktsionaalsus oleks samasugune nagu enimlevinud brauseritel (nt \textit{Google Chrome}). Katsetada seda klasside \textit{Browser} ja \textit{BrowserImpl} abil.
 \end{problem}
+
+
+
+\begin{problem}
+\textbf{Boonusülesanne} (2p)
+\newline
+Implementeerida liides \textit{SelfOrganizingListMap}.
+\end{problem}
+
 
 \url{https://github.com/ut-aa/aa2016-lab3}
 
