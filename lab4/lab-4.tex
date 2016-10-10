@@ -1,0 +1,83 @@
+\documentclass[a4paper]{article}
+
+\usepackage{../styles/new-style}
+
+\newcommand{\hmwkTitle}{Paisktabel} % Assignment title
+\newcommand{\hmwkClass}{Algoritmid ja andmestruktuurid} % Course/class
+
+\begin{document}
+
+\textbf{Kodutöö esitamise tähtaeg: 22. oktoober, 23:59}
+
+
+{\center
+\subsection*{Paisktabel}
+}
+
+
+\begin{problem}
+\textbf{Ülesanne 1} (40\%)
+
+Implementeerida liides \textit{HashTable}.
+\begin{enumerate}
+\item 
+Realiseerida lahtise addresseerimise ja lineaarse kompimisega paisktabel vastavalt liidesele.
+
+\item Implementeerida paisktabel kimbumeetodil vastavalt liidesele.
+\end{enumerate}
+\end{problem}
+
+Paiskfunktsiooniks võib võtta näiteks funktsiooni 
+
+\[h(k) = [m\cdot (k \cdot T  - [k \cdot T])]\]
+
+kus $k$ on võti, $m$ tabeli pikkus ja $T = \frac{\sqrt{5} - 1}{2}$, sulud $[...]$ tähistavad täisosa.
+
+\begin{problem}
+\textbf{Ülesanne 2} (20\%)
+
+Viia läbi järgmised mõõtmised:
+
+\begin{itemize}
+\item fikseerida paisktabeli pikkus (nt 1000);
+
+\item genereerida täisarvujärjend pikkusega $10\%, 20\%, \cdots , 90\%, 99\%$ paisktabeli pikkusest, elementideks juhuslikud täisarvud (nt 1-st 10000-ni);
+
+\item paigutada järjendi elemendid paisktabelisse kummalgi meetodil;
+
+\item genereerida teatud arv (nt 1000) juhuslikke täisarve samades piirides nagu
+järjendi elemendid ja iga täisarvu puhul lugeda kokku, mitu võrdlemist tehakse
+selle täisarvu otsimisel kummastki paisktabelist, eristades seejuures
+edukat ja mitteedukat otsingut.
+\end{itemize}
+
+Tulemused esitada graafikutena, kus $x$-teljel on paisktabeli täituvus ($10\%,
+20\%, \cdots , 90\%, 99\%)$ ja $y$-teljel keskmine võrdlemiste arv eduka otsingu korral ja mitteeduka otsingu korral kummastki paisktabelist.
+\end{problem}
+
+
+
+\begin{problem}
+\textbf{Ülesanne 3} (30\%)
+
+Implementeerida liides \textit{Sorter}.
+
+Realiseerida järjendi sortimine vastavalt liidesele kimbumeetodiga. Paiskfunktsiooniks võtta ühtlane paiskamine.
+\end{problem}
+
+
+\begin{problem}
+\textbf{Ülesanne 4} (10\%)
+
+Võrrelda eelnevas ülesandes realiseeritud sortimismeetodi töökiirust mõne kiirema sortimismeetodi (keerukusega
+$O(n\log n)$) kiirusega sorditava järjendi mitmesuguste pikkuste korral.
+Järjendi elementideks valida nt $1000, \dots , 100000$ juhuslikku täisarvu 1 ja 100000 vahelt.
+
+\medskip
+Saadud tulemuste põhjal koostada graafik, kus x-teljel on järjendi pikkus ja
+y-teljel kummagi sortimismeetodi tööaeg.
+\end{problem}
+
+Liidesed kättesaadavad aaddressil \url{https://github.com/ut-aa/aa2016-lab4}.
+
+\end{document}
