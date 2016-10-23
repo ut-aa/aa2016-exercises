@@ -1,0 +1,80 @@
+\documentclass[a4paper]{article}
+
+\usepackage{../styles/new-style}
+\usepackage{float}
+
+\newcommand{\hmwkTitle}{Tasakaalustatud puud} % Assignment title
+\newcommand{\hmwkClass}{Algoritmid ja andmestruktuurid} % Course/class
+
+\begin{document}
+
+\textbf{Kodutöö esitamise tähtaeg: 5. november, 23:59}
+
+{\center
+\subsection*{AVL-puu}
+}
+
+Eelmises kodutöös implementeerisime sõnastiku, kasutadeks selleks paisktabelit. Selles kodutöös implementeerime sõnastiku kasutades \textbf{tasakaalustatud kahendotsimispuid}.
+
+Kahendotsimispuu on kahendpuu, mis täidab veel ühte tingimust: 
+
+Kui puu juurtipus $A$ on kirje $a$, siis kõik puus olevad kirjed, mis on kirjest $a$ väiksemad asuvad $A$ vasakus alampuus ning kõik kirjed, mis on kirjest $a$ suuremad asuvad $A$ paremas alampuus.
+
+\begin{figure}[H]
+\centering
+\small
+\begin{tikzpicture}
+\tikzstyle{level 1}=[sibling distance=60mm] 
+\tikzstyle{level 2}=[sibling distance=30mm] 
+\tikzstyle{level 3}=[sibling distance=20mm]
+\tikzstyle{inverted}=[rectangle,fill=black,rounded corners]
+\node [draw,rounded corners] (1a){$25$}
+	child {node [draw, rounded corners] (2a) {$ 13 $} 
+		child {node [draw, rounded corners] (3a) {$ 9 $} 
+			child{ node [rectangle,draw, rounded corners] (4a) {$3$}
+				child{ node [rectangle, draw, rounded corners] (5a) {$1$}}
+				child{ node [rectangle, draw, rounded corners] (5b) {$7$}}
+			}
+			child{ node [rectangle,draw, rounded corners] (4b) {$11$}
+			}
+		}	
+		child {node [rectangle,draw,rounded corners] (3b) {$23$} 
+			child{edge from parent[white]} 
+			child{ node [rectangle, draw, rounded corners] (4d) {$24$}}
+		}
+	}
+	child {node [rectangle,draw,rounded corners] (2b) {$37$} 
+		child {node [rectangle,draw,rounded corners] (3c) {$33$} 
+			child{ node [rectangle, draw, rounded corners] (4e) {$31$}}
+			child{ node [rectangle, draw, rounded corners] (4f) {$35$}}
+		}
+		child {node [rectangle,draw,rounded corners] (3d) {$52$}}		
+	};
+	
+
+
+\end{tikzpicture}
+\normalsize
+\caption{Näide kahendotsimispuust, mille kirjeteks on täisarvud.}
+\end{figure}
+
+Kahendotsimispuu on \textbf{peaaegu tasakaalus} parajasti siis, kui kõige pikem tee juurest mingi leheni ei ole rohkem kui 2 korda pikem kui kõige lühem tee juurest mingi leheni.Paneme tähele, et joonisel kujutatud kahendpuu on peaaegu tasakaalus.
+
+Ütleme, et kahendotsimispuu on \textbf{tasakaalus} kui tema alampuude kõrgused on kas võrdsed või üks alampuu on teisest alampuust ühe võrra kõrgem. Paneme tähele, et kui puu on tasakaalus, siis sellest järeldub otse, et puu on peaaegu tasakaalus.
+
+Kahendotsimispuud, kuhu saab elemente lisada ja kust saab elemente eemaldada nii, et puu jääks (peaaegu) tasakaalu, nimetatake (peaaegu) tasakaalustatud kahendotsimispuuks. 
+
+Selles praktikumis keskendume ühele tasakaalustatud kahendotsimispuu implementatsioonile, AVL-puule. Praktikumijuhendajaga kokkuleppel on aga võimalik ka implementeerida mõni muu (peaaegu) tasakaalus kahendotsimispuu. Tuntum alternatiiv on \textbf{puna-must puu}, \url{https://en.wikipedia.org/wiki/Red-black_tree}.
+
+
+
+\begin{problem}
+\textbf{Ülesanne}
+
+Kasutades tasakaalustatud kahendpuud implementeerida liides \textit{TreeMap}.
+\end{problem}
+
+
+Liides ja abiklassid kättesaadavad aaddressil \url{https://github.com/vootelerotov/aa-lab-5}.
+
+\end{document}
