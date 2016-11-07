@@ -1,0 +1,56 @@
+\documentclass[a4paper]{article}
+
+\usepackage{../styles/new-style}
+\usepackage{float}
+
+\newcommand{\hmwkTitle}{Tasakaalustatud puud} % Assignment title
+\newcommand{\hmwkClass}{Algoritmid ja andmestruktuurid} % Course/class
+
+\begin{document}
+
+\textbf{Kodutöö esitamise tähtaeg: 19. november, 23:59}
+
+{\center
+\subsection*{Kuhi}
+}
+
+Valida järgnevast kahest ülesandest \textbf{üks}.
+
+Kompaktse kahendpuu esitamiseks kasutatakse tihti massiivi, kuhu on kirjed
+salvestatud tippude tasemete kaupa. Siis on ajaga $O(1)$ kättesaadavad nii antud
+tipu alluvad kui ka ülemus: kui positsioone nummerdatakse 0-st ja tipu $v$
+kirje paikneb positsioonis $k$, siis
+
+\begin{itemize}
+\item vasaku ja parema alluva kirjed, kui nad eksisteerivad, paiknevad vastavalt
+positsioonides $2k + 1$ ja $2k + 2$;
+\item ülemuse kirje, kui ta eksisteerib, paikneb positsioonis $[(k - 1) / 2]$.
+\end{itemize}
+
+Kahendkuhi (ingl \textit{binary heap}) on kompaktset kahendpuud kasutav andmestruktuur, kus iga tipu $v$ korral kehtib tingimus, et tipu $v$ võti on väiksem või võrdne tema alluvate võtmetest. 
+
+Kahendkuhja saab kasutada eelistusjärjekorra realiseerimiseks. Eelistusjärjekord võimaldab (lisaks muudele operatsioonidele) minimaalse võtme väärtusega elemendile kiiret ligipääsu. 
+  
+\begin{problem}
+\textbf{Ülesanne 1}
+
+Kasutades kompaktset kahendpuud implementeerida liides \textit{MinBinaryHeap}.
+\end{problem}
+
+Nüüd vaatame ühte rakendust eelistusjärjekorrale.
+ 
+Tekstide kompaktsemaks esitamiseks ehk pakkimiseks arvuti välismälus võetakse
+kasutusele muutuva pikkusega sümbolikoodid. Üks võimalus niiviisi
+teksti pakkida on kasutades prefikskoode. Parimad sellised koodid leitakse
+kasutades Huffmani algoritmi. Algoritmi kirjelduse võib leida näiteks Jüri Kiho,
+Algoritmid ja andmestruktuurid, 2003, lehekülgedel 83-86. (kättesaadav moodlest)
+
+\begin{problem}
+\textbf{Ülesanne 2}
+
+Realiseerida Huffmani algoritm vastavalt liidesele \textit{HuffmanAlgorithm}.
+\end{problem}
+
+Liidesed on kättesaadavad aaddressil \url{https://github.com/ut-aa/aa2016-lab6}.
+
+\end{document}
